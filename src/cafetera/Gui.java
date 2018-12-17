@@ -4,19 +4,27 @@ import java.util.Scanner;
 
 public class Gui { 
 	
+	// Creamos el objeto Scanner para leer datos.
 	static Scanner sc = new Scanner(System.in);
+	
+	// Creamos el objeto cafetera.
 	static Cafetera cafetera = new Cafetera();
 	
+	// Creamos una coleccion de objetos consumibles para poder acceder a ellos.
+	static Consumible [] consumibles = cafetera.getConsumibles();
+	
 	public static void main(String[] args) {
-		
+		// Variable para apagar la cafetera.
 		boolean apagar = false;
 		
+		// Creamos los consumibles.
 		cafetera.insertarConsumible(0, 2, 1.00, 0.15, "Café solo");
 		cafetera.insertarConsumible(1, 3, 1.25, 0.20, "Café con leche");
 		cafetera.insertarConsumible(2, 4, 1.50, 0.20, "Capuccino");
 		cafetera.insertarConsumible(3, 10, 1.00, 0.25, "Té rojo");
 		cafetera.insertarConsumible(4, 10, 1.00, 0.25, "Té verde");
 		
+		// Inicimos la maquina.
 		while (!apagar) {
 		
 			// Pantalla de inicio.
@@ -132,7 +140,7 @@ public class Gui {
 							default: 
 								// Cerramos sesión.
 								salir = true;
-								System.out.println("Cerrando sesión...");
+								System.out.println("Cerrando sesión...\n\n");
 								
 								break;
 						
@@ -176,19 +184,19 @@ public class Gui {
 
 	public static void seleccionarProductos() {
 
-		Consumible [] consumibles = cafetera.getConsumibles();
 		System.out.println("\n\n     ELIJA UN PRODUCTO   \n");
-		System.out.printf("(1) %s ----------- %.2f €",consumibles[0].getTipo(),consumibles[0].getPrecio());
-		System.out.printf("(2) %s ----------- %.2f €",consumibles[1].getTipo(),consumibles[1].getPrecio());	
-		System.out.printf("(3) %s ----------- %.2f €",consumibles[2].getTipo(),consumibles[2].getPrecio());
-		System.out.printf("(4) %s ----------- %.2f €",consumibles[3].getTipo(),consumibles[3].getPrecio());
-		System.out.printf("(5) %s ----------- %.2f €",consumibles[4].getTipo(),consumibles[4].getPrecio());
+		System.out.printf("(1) %s ----------- %.2f €%n",consumibles[0].getTipo(),consumibles[0].getPrecio());
+		System.out.printf("(2) %s ----------- %.2f €%n",consumibles[1].getTipo(),consumibles[1].getPrecio());	
+		System.out.printf("(3) %s ----------- %.2f €%n",consumibles[2].getTipo(),consumibles[2].getPrecio());
+		System.out.printf("(4) %s ----------- %.2f €%n",consumibles[3].getTipo(),consumibles[3].getPrecio());
+		System.out.printf("(5) %s ----------- %.2f €%n",consumibles[4].getTipo(),consumibles[4].getPrecio());
+		System.out.println("(6) CANCELAR.");
 	
 	}
 	
 	public static void introducirMoneda() {
 
-		System.out.println("INTRODUZCA MONEDAS:");
+		System.out.println("\n\nINTRODUZCA MONEDAS:");
 		System.out.println("(1) Moneda de 5 céntimos.");
 		System.out.println("(2) Moneda de 10 céntimos.");	
 		System.out.println("(3) Moneda de 20 céntimos.");
@@ -200,7 +208,7 @@ public class Gui {
 	
 	public static boolean inicarSesionAdministrador() {
 
-		System.out.println("BIENVENIDO Señor Administrador.");
+		System.out.println("\n\nBIENVENIDO Señor Administrador.");
 		System.out.println("INTRODUZCA Usuario:");
 		String usuario = sc.next();
 		System.out.println("INTRODUZCA Contraseña:");
@@ -221,7 +229,7 @@ public class Gui {
 	
 	public static void menuAdministrador() {
 
-		System.out.println("INTRODUCIR OPCIÓN:");
+		System.out.println("\n\nINTRODUCIR OPCIÓN:");
 		System.out.println("(1) Ver recaudación.");
 		System.out.println("(2) Recoger recaudación.");
 		System.out.println("(3) Revisar utiles y consumibles.");	
