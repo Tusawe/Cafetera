@@ -47,11 +47,8 @@ public class Cafetera {
 		return vasos;
 	}
 
-	/**
-	 * @param vasos the vasos to set
-	 */
-	public void setVasos(int vasos) {
-		this.vasos = vasos;
+	public void recargarVasos() {
+		this.vasos = 10;
 	}
 	
 	public void gastarVasos() {
@@ -65,11 +62,8 @@ public class Cafetera {
 		return palitos;
 	}
 
-	/**
-	 * @param palitos the palitos to set
-	 */
-	public void setPalitos(int palitos) {
-		this.palitos = palitos;
+	public void recargarPalitos() {
+		this.palitos = 10;
 	}
 	
 	public void gastarPalitos() {
@@ -83,11 +77,8 @@ public class Cafetera {
 		return azucar;
 	}
 
-	/**
-	 * @param azucar the azucar to set
-	 */
-	public void setAzucar(int azucar) {
-		this.azucar = azucar;
+	public void recargarAzucar() {
+		this.azucar = 10;
 	}
 	
 	/**
@@ -104,11 +95,8 @@ public class Cafetera {
 		return agua;
 	}
 
-	/**
-	 * @param agua the agua to set
-	 */
-	public void setAgua(double agua) {
-		this.agua = agua;
+	public void recargarAgua() {
+		this.agua = 5.00;
 	}
 	
 	/**

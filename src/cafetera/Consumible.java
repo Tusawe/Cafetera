@@ -27,14 +27,14 @@ public class Consumible{
 	/**
 	 * @return the tipo
 	 */
-	public String getTipos() {
+	public String getTipo() {
 		return tipo;
 	}
 
 	/**
 	 * @param tipo the tipo to set
 	 */
-	public void setCapsulas(String tipo) {
+	public void setTipo(String tipo) {
 		this.tipo = tipo;
 	}
 
