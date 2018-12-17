@@ -1,5 +1,9 @@
 package cafetera;
 
+/**
+ * @author José Luis Gómez López
+ * @version 1.0
+ */
 public class Consumible{
 	
 	private int tiempo;

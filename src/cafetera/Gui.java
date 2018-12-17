@@ -8,11 +8,17 @@ public class Gui {
 	
 	public static void main(String[] args) {
 		
+		// Pantalla de inicio.
+		inicio();
+		
+		// Menú de inicio.
+		menu();
+		int op  = sc.nextInt();
 		
 
 	}
 	
-	public static void inicioGui() {
+	public static void inicio() {
 		
 		System.out.println("*********************************");
 		System.out.println("*********************************");
@@ -25,7 +31,7 @@ public class Gui {
 		
 	}
 	
-	public static void menuGui() {
+	public static void menu() {
 
 		System.out.println("\n\n     INTRODUCIR OPCIÓN     \n");
 		System.out.println("(1) Pedir café o té.");
@@ -33,7 +39,7 @@ public class Gui {
 		
 	}
 
-	public static void seleccionarProductosGui() {
+	public static void seleccionarProductos() {
 
 		System.out.println("\n\n     ELIJA UN PRODUCTO   \n");
 		System.out.println("(1) Café solo ----------- 1.00€");
@@ -44,7 +50,7 @@ public class Gui {
 	
 	}
 	
-	public static void introducirMonedaGui() {
+	public static void introducirMoneda() {
 
 		System.out.println("INTRODUZCA MONEDAS:");
 		System.out.println("(1) Moneda de 5 céntimos.");
@@ -55,8 +61,8 @@ public class Gui {
 		System.out.println("(6) CANCELAR.");
 	
 	}
-
-	public static boolean inicarSesionAdministradorGui() {
+	
+	public static boolean inicarSesionAdministrador() {
 
 		System.out.println("BIENVENIDO Señor Administrador.");
 		System.out.println("INTRODUZCA Usuario:");
@@ -77,7 +83,7 @@ public class Gui {
 	
 	}
 	
-	public static void menuAdministradorGui() {
+	public static void menuAdministrador() {
 
 		System.out.println("INTRODUCIR OPCIÓN:");
 		System.out.println("(1) Ver recaudación.");
