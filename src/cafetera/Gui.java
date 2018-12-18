@@ -392,8 +392,7 @@ public class Gui {
 							case 9: 
 								// Apagamos la máquina.
 								salir = true;
-								apagar = true;
-								System.out.println("Apagando máquina...");
+								apagar = true;								
 								
 								break;
 								
