@@ -146,7 +146,7 @@ public class Gui {
 							cafetera.gastarAgua(consumibles[2].getAgua());
 							cafetera.gastarPalitos();
 							cafetera.gastarVasos();
-							consumibles[1].gastarCapsulas();
+							consumibles[2].gastarCapsulas();
 							
 							// Producimos el consumible.
 							System.out.printf("Sirviendo %S. Espere %d segundos.%n",consumibles[2].getTipo(),consumibles[2].getTiempo());
@@ -254,7 +254,7 @@ public class Gui {
 						while (!(opAdmin >= 1 && opAdmin <= 10)) {
 							
 							System.out.println("ERROR: Opción incorrecta.");
-							menu();
+							menuAdministrador();
 							opAdmin  = sc.nextInt();
 							
 						}
@@ -607,7 +607,6 @@ public class Gui {
 					
 				default:
 					cancelar = true;
-					System.out.printf("Devolviendo sus %.2f €...%n",dinero);
 					break;							
 			
 			}					
@@ -618,6 +617,11 @@ public class Gui {
 		if (dinero > consumibles[consumible].getPrecio()) {
 			
 			System.out.printf("ERROR. No hay cambio. Devolviendo sus %.2f €%n%n",dinero);
+			return false;
+			
+		} else if (dinero < consumibles[consumible].getPrecio()) {
+			
+			System.out.printf("Devolviendo sus %.2f €...%n",dinero);
 			return false;
 			
 		}
