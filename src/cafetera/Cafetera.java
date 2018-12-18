@@ -119,4 +119,20 @@ public class Cafetera {
 		
 	}
 	
+	/**
+	 * @param consumible el consumible que se quiere sacar
+	 * @return true si es posible sacar ese café o té.
+	 */
+	public boolean esPosible(int consumible) {
+		
+		if ((consumibles[consumible].getCapsulas() >= 1) && (vasos >= 1) && (palitos >= 1) && (azucar >= 2) && (agua >= consumibles[consumible].getAgua())) {
+			
+			return true;
+			
+		}
+		
+		return false;
+		
+	}
+	
 }
